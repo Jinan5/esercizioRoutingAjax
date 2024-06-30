@@ -9,7 +9,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrl: './album-dettaglio.component.css',
 })
 export class AlbumDettaglioComponent implements OnInit {
-  photos?: AlbumPhoto[] = [];
+  photos: AlbumPhoto[] = [];
   constructor(private s: AlbumService, private r: ActivatedRoute) {}
   ngOnInit(): void {
     const id = this.r.snapshot.paramMap.get('id')!;

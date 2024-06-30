@@ -8,7 +8,7 @@ import { Album } from '../../models/model';
   styleUrl: './albums-vetrina.component.css',
 })
 export class AlbumsVetrinaComponent implements OnInit {
-  albums?: Album[];
+  albums: Album[] = [];
   constructor(private s: AlbumService) {}
   ngOnInit(): void {
     this.s.getAlbums().subscribe((a) => (this.albums = a));
