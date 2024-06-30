@@ -1,0 +1,16 @@
+<div class="container py-4" *ngIf="photos">
+  <div class="row row-cols-1 row-cols-md-4 g-4">
+    <div class="card" style="width: 33%" *ngFor="let p of photos">
+      <a [href]="p.url" target="_blank">
+        <img [src]="p.thumbnailUrl" class="card-img-top" alt="..." />
+      </a>
+
+      <div class="card-body">
+        <h5 class="card-title text-center">{{ p.id }}</h5>
+        <p class="card-text">
+          {{ p.title }}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
