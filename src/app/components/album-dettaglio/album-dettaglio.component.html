@@ -1,6 +1,7 @@
 <div class="container py-4">
-  <div class="row row-cols-1 row-cols-md-4 g-4">
-    <div class="card" style="width: 33%" *ngFor="let p of photos">
+  <h1>Altra bellissima roba</h1>
+  <div class="row row-cols-1 row-cols-md-4 g-4 mt-2">
+    <div class="card m-2" style="width: 32%" *ngFor="let p of photos">
       <a [href]="p.url" target="_blank">
         <img [src]="p.thumbnailUrl" class="card-img-top" alt="..." />
       </a>
@@ -13,4 +14,5 @@
       </div>
     </div>
   </div>
+  <button class="btn btn-primary mt-3" routerLink="/album/">Indietro</button>
 </div>
